@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- SEO Metadata from saqr-al-khaleej -->
+    <!-- SEO Metadata -->
     <title>مقاول أسفلت بالدمام | شركة صقر الخليج لسفلتة الطرق ورصف المواقف - 0597330465</title>
     <meta name="description" content="أفضل مقاول أسفلت في الدمام والمنطقة الشرقية. متخصصون في سفلتة طرق، سفلتة مواقف، كشط وإعادة سفلتة، سفلتة فلل، وتخطيط مواقف السيارات بضمان 12 شهر. اتصل بنا الآن." />
     <meta name="keywords" content="مقاول أسفلت, شركة أسفلت, سفلتة طرق, سفلتة شوارع, سفلتة مواقف, سفلتة فلل, سفلتة منازل, سفلتة مداخل فلل, كشط وإعادة سفلتة, صيانة أسفلت, تخطيط مواقف السيارات, مقاول أسفلت الدمام, مقاول أسفلت الخبر, مقاول أسفلت الجبيل" />
@@ -28,14 +28,58 @@
     <meta name="twitter:description" content="أفضل مقاول أسفلت في الدمام والمنطقة الشرقية. سفلتة طرق ومواقف بضمان 12 شهر." />
     <meta name="twitter:image" content="/hero-road.jpg" />
 
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17962928995"></script>
+    <!-- Google tag (gtag.js) - Updated ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18012120107"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'AW-17962928995');
+      gtag('config', 'AW-18012120107');
     </script>
+
+    <!-- Conversion Tracking Script -->
+    <script>
+      function trackConversion() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18012120107/urJfCImE5docEKvI7IxD'
+        });
+      }
+
+      // Add event listeners to phone and whatsapp links
+      document.addEventListener('DOMContentLoaded', function() {
+        // Observer to handle dynamically rendered elements by React
+        const observer = new MutationObserver(function(mutations) {
+          const links = document.querySelectorAll('a[href^="tel:"], a[href*="wa.me"]');
+          links.forEach(link => {
+            if (!link.dataset.tracked) {
+              link.addEventListener('click', trackConversion);
+              link.dataset.tracked = 'true';
+            }
+          });
+          
+          // Hide contact form section if it appears
+          const contactSection = document.getElementById('contact') || document.querySelector('section:has(form)');
+          if (contactSection) {
+            contactSection.style.display = 'none';
+          }
+          const forms = document.querySelectorAll('form');
+          forms.forEach(form => {
+            const parentSection = form.closest('section');
+            if (parentSection) parentSection.style.display = 'none';
+            else form.style.display = 'none';
+          });
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
+      });
+    </script>
+
+    <style>
+      /* Force hide the contact section and any form */
+      #contact, section:has(form), form {
+        display: none !important;
+      }
+    </style>
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
