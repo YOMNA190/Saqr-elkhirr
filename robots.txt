@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /public/
+
+Sitemap: https://saqr-alkhaleej.vercel.app/sitemap.xml
